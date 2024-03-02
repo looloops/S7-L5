@@ -12,19 +12,19 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container"> <a class="navbar-brand" href="#">E-Shop</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container"> <a class="navbar-brand" href="./index.html">E-Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Back office</a>
+                            <a class="nav-link" href="./back-office.html">Back office</a>
                         </li>
                     </ul>
                 </div>
@@ -38,9 +38,44 @@
 
             </div>
         </div>
-
     </main>
 
+    <!-- Confirmation delete modal -->
+    <div class="modal fade" id="delete-product-confirmation" tabindex="-1"
+        aria-labelledby="delete-product-confirmation-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delete-product-confirmation-label">Attenzione</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="delete-product-confirmation-text">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmProductDelete()">Conferma</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Product deleted modal -->
+    <div class="modal fade" id="delete-product-confirmed" tabindex="-1" aria-labelledby="delete-product-confirmed-label"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delete-product-confirmed-label">Eliminazione OK</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="delete-product-confirmed-text">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
